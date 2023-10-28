@@ -4,8 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <link href="style.css" rel="stylesheet" type="text/css"
 </head>
 <body>
+    <header>
+        <div class= "menu">
+            <span>Menu</span>
+        </div>
+        <div class= "title">
+            <h1>Get to do</h1>
+            <h3>Because Perspective is everything</h3>
+        </div>
+        <div class= "theme">
+            <span>Theme</span>
+        </div>
+    </header>
+    <div class="content">
+        <div class="left-panel">
+            <div class="home-section">
+                <h2>Home</h2>
+                <div class = "tile" id="allTasks">
+                    <span>All Tasks</span>
+                </div>
+                <div class = "tile" id="today">
+                    <span>Today</span>
+                </div>
+                <div class = "tile" id="important">
+                    <span>Important</span>
+                </div>
+            </div>
+            <div class="project-section">
+                <h2>Projects</h2>
+                <form id="projectForm" class="hidden">
+                    <div class="projectIcon">
+                        <span>-</span>
+                    </div>
+                    <div class="inputField">
+                        <input type ="text" class="ProjectInput" placeholder="Enter Project Name" maxlength="30">
+                        <div class="formButtons">
+                            <input type="submit" class="projectSubmitBtn" value="Add">
+                            <input type="button" class="projectCancelBtn" value="Cancel">
+                        </div>
+                    </div>
+                </form>
+                <span class="addProject tile" >Add Project</span>
+                <div class="option hidden" id="projectOption">
+                    <button>Rename</button>
+                    <button>Delete</button>
+                </div>
+                <!-- hidden pop up form -->
+                <form id="renameForm" class="hidden" autocomplete="off">
+                    <div class="projectIcon">
+                        <span class="material-icons-round">menu</span>
+                    </div>
+                    <div class="inputField">
+                        <input type="text" id="projectRenameInput" maxlength="24">
+                        <div class="formButtons">
+                            <input type="submit" class="rename-renameBtn" value="Rename">
+                            <input type="button" class="rename-cancelBtn" value="Cancel">
+                        </div>
+                    </div>
+                </form>
+            </div>    
+                <div class="project-list"></div>
+            </div>
+        </div>
+        <div class= "toDoList-section">
+            
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
